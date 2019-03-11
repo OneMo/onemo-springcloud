@@ -1,8 +1,8 @@
-package com.wdfu.springcloud.service.impl;
+package com.wdfu.springcloud.consumer.impl;
 
 import com.wdfu.springcloud.dao.DeptDao;
 import com.wdfu.springcloud.entity.Dept;
-import com.wdfu.springcloud.service.DeptService;
+import com.wdfu.springcloud.consumer.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

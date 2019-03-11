@@ -1,6 +1,7 @@
-package com.wdfu.springcloud.service;
+package com.wdfu.springcloud.consumer;
 
 import com.wdfu.springcloud.entity.Dept;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -11,7 +12,8 @@ import java.util.List;
  * @ClassName: DeptClientHistrix.java
  * @date 2019/3/11 14:23
  */
-public class DeptClientHistrix implements DeptClientService{
+@Component
+public class DeptConsumerHystrix implements DeptConsumer{
     @Override
     public Dept get(long id) {
         return null;

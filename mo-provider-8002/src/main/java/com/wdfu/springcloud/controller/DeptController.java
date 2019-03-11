@@ -1,7 +1,7 @@
 package com.wdfu.springcloud.controller;
 
 import com.wdfu.springcloud.entity.Dept;
-import com.wdfu.springcloud.service.DeptService;
+import com.wdfu.springcloud.consumer.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

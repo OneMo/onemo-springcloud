@@ -1,4 +1,4 @@
-package com.wdfu.springcloud.service;
+package com.wdfu.springcloud.consumer;
 
 import com.wdfu.springcloud.entity.Dept;
 import org.springframework.cloud.netflix.feign.FeignClient;
@@ -15,8 +15,8 @@ import java.util.List;
  * @ClassName: DeptClientService.java
  * @date 2019/3/11 14:21
  */
-@FeignClient(value = "MO-PROVIDER", fallback = DeptClientHistrix.class)
-public interface DeptClientService {
+@FeignClient(value = "MO-PROVIDER", fallback = DeptConsumerHystrix.class)
+public interface DeptConsumer {
     @RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
     Dept get(@PathVariable("id") long id);
 

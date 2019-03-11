@@ -1,4 +1,4 @@
-package com.wdfu.springcloud.service;
+package com.wdfu.springcloud.consumer;
 
 import com.wdfu.springcloud.entity.Dept;
 

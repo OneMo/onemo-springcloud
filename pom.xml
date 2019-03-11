@@ -17,6 +17,7 @@
         <module>mo-eureka-7003</module>
         <module>mo-provider-8002</module>
         <module>mo-provider-8003</module>
+        <module>mo-provider-hystrix-8001</module>
     </modules>
 
 
