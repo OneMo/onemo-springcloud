@@ -1,0 +1,31 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: mo-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:7001/eureka,http://server2:7002/eureka,http://server3:7003/eureka
+  instance:
+    instance-id: server4
+    prefer-ip-address: true
+
+
+
+
+
+info:
+  app.name: atguigu-microcloud
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+
+zuul:
+  routes:
+    mydept.serviceId: mo-provider
+    mydept.path: /mydept/**
+  ignored-services: mo-provider
