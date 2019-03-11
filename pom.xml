@@ -18,6 +18,7 @@
         <module>mo-provider-8002</module>
         <module>mo-provider-8003</module>
         <module>mo-provider-hystrix-8001</module>
+        <module>mo-comsumer-hystrix-dashboard</module>
     </modules>
 
 
