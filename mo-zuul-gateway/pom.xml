@@ -15,11 +15,11 @@
         <!-- zuul路由网关 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zuul</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
         </dependency>
         <!-- actuator监控 -->
         <dependency>
@@ -29,7 +29,8 @@
         <!--  hystrix容错-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <version>2.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -37,8 +38,8 @@
         </dependency>
         <!-- 日常标配 -->
         <dependency>
-            <groupId>com.atguigu.springcloud</groupId>
-            <artifactId>microservicecloud-api</artifactId>
+            <groupId>com.wdfu.springcloud</groupId>
+            <artifactId>mo-service</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -52,15 +53,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-        <!-- 热部署插件 -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>springloaded</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
         </dependency>
 
     </dependencies>

@@ -12,15 +12,19 @@ spring:
     name: mo-provider
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    driver-class-name: com.mysql.jdbc.Driver                # mysql驱动包
     url: jdbc:mysql://144.34.218.146:3306/cloudDB01              # 数据库名称
     username: root
     password: root
-    dbcp2:
-      min-idle: 5                                           # 数据库连接池的最小维持连接数
-      initial-size: 5                                       # 初始化连接数
-      max-total: 5                                          # 最大连接数
-      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+    druid:
+      #初始化时建立物理连接的个数
+      initial-size: 5
+      # 数据库连接池的最小维持连接数
+      min-idle: 5
+      #最大连接池数量 maxIdle已经不在使用
+      max-active: 20
+      #获取连接时最大等待时间，单位毫秒
+      max-wait: 2000
 
 
 
@@ -29,7 +33,7 @@ eureka:
     service-url:
       defaultZone: http://server1:7001/eureka,http://server2:7002/eureka/,http://server3:7003/eureka/
   instance:
-    instance-id:  ${spring.cloud.client.ipAddress}:${server.port}
+    instance-id:  ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
 
 

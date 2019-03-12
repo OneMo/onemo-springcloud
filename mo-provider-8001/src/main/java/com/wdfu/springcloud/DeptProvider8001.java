@@ -17,4 +17,5 @@ public class DeptProvider8001 {
     public static void main(String[] args) {
         SpringApplication.run(DeptProvider8001.class, args);
     }
+
 }
